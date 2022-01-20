@@ -6,8 +6,9 @@ class Question(models.Model):
     question_text = models.CharField(max_length=200)  # 데이터 타입 문자열
     pub_date = models.DateTimeField('date published')  # 데이터 타입 날짜
 
-    def __str__(self):
-        return self.question_text
+
+def __str__(self):
+    return self.question_text
 
 
 class Choice(models.Model):
@@ -15,7 +16,8 @@ class Choice(models.Model):
     choice_text = models.CharField(max_length=200)  # 문자열
     votes = models.IntegerField(default=0)  # 정수
 
-    def __str__(self):
-        return self.choice_text
 
-    # 테이블 두개 만드는 것 부모테이블 자식테이블
+def __str__(self):
+    return self.choice_text
+
+# 테이블 두개 만드는 것 부모테이블 자식테이블
